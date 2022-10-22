@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @apply flex min-h-[4000px] flex-col bg-neutral-200;
+}
+
+#root {
+  @apply h-full flex-auto;
+}
