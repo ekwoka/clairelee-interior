@@ -9,7 +9,8 @@
     "serve": "vite preview",
     "lint": "run-s lint:*",
     "lint:eslint": "eslint --fix src",
-    "lint:prettier": "prettier --write . --loglevel warn"
+    "lint:prettier": "prettier --write . --loglevel warn",
+    "prepare": "husky install"
   },
   "license": "MIT",
   "devDependencies": {
