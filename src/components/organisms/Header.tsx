@@ -39,7 +39,7 @@ export const Header: Component = () => {
       <header
         ref={headerOnMount}
         class={classNames(
-          'w-full sticky top-0 transition-all bg-neutral-100 duration-700 p-4 backdrop-filter',
+          'w-full sticky top-0 transition-all bg-neutral-100 duration-700 p-4 backdrop-filter z-10',
           atTop() ? 'shadow-none' : 'shadow-md',
           menuIsOpen() && '!bg-opacity-100 !bg-neutral-50'
         )}
