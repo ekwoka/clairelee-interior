@@ -1,0 +1,22 @@
+# example netlify.toml
+[build]
+  command = "pnpm run build"
+  functions = "netlify/functions"
+  publish = "dist"
+
+[context.production.environment]
+  NODE_VERSION = '18.11.0'
+  AWS_LAMBDA_JS_RUNTIME = 'nodejs16.x'
+
+  [[redirects]]
+    from ="/api/*"
+    to = "/.netlify/functions/:splat"
+    status = 200
+
+  [[redirects]]
+    from = "/*"
+    to = "/index.html"
+    status = 200
+
+[functions]
+  node_bundler = "esbuild"
