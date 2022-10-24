@@ -4,3 +4,7 @@ declare module '*.md' {
   export const details: Record<string, string | string[]>;
   export const Component: ComponentType;
 }
+
+declare module 'virtual:all-projects' {
+  export const projects: Record<string, string>[];
+}

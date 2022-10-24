@@ -1,6 +1,7 @@
 import { Icon } from 'solid-heroicons';
 import { bars_3 } from 'solid-heroicons/solid';
 
+import { A } from '@solidjs/router';
 import { Component, createSignal } from 'solid-js';
 
 import { classNames } from '../../utils/classNames';
@@ -45,7 +46,7 @@ export const Header: Component = () => {
         style="--tw-bg-opacity:0; --tw-backdrop-blur:blur(0px);">
         <div class="max-w-screen-md mx-auto flex justify-between relative items-center gap-16 px-4">
           <nav class="flex-1 hidden md:flex flex-row gap-8 justify-end">
-            <span>Projects</span>
+            <A href="/projects">Projects</A>
             <span>About</span>
           </nav>
           <h1 class="flex-none flex flex-col items-center uppercase font-serif">

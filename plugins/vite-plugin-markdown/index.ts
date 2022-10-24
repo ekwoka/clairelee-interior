@@ -1,5 +1,5 @@
 /* eslint-disable no-restricted-syntax */
-import { readFile } from 'fs/promises';
+import { readFile, readdir } from 'fs/promises';
 import path from 'path';
 import * as vite from 'vite';
 
@@ -59,4 +59,48 @@ export const MDX = (): vite.Plugin => {
       return modules;
     },
   };
+};
+
+export const virtualProjectsIndex = (): vite.Plugin => {
+  const virtualModuleId = 'virtual:all-projects';
+  const resolvedVirtualModuleId = '\0' + virtualModuleId;
+
+  return {
+    name: 'all-projects', // required, will show up in warnings and errors
+    resolveId(id) {
+      if (id === virtualModuleId) {
+        return resolvedVirtualModuleId;
+      }
+    },
+    async load(id) {
+      if (id === resolvedVirtualModuleId) {
+        const files = await readdir(
+          path.join(process.cwd(), 'content', 'projects')
+        );
+        const promises = files.map(async (file) => {
+          const { name, ext } = path.parse(file);
+          const target = path.join(
+            process.cwd(),
+            'content',
+            'projects',
+            `${name}${ext}`
+          );
+          const content = await readFile(target, 'utf-8');
+          const details = parseFrontMatter(content);
+          return { ...details, id: name };
+        });
+
+        return `export const projects = ${JSON.stringify(
+          (await Promise.all(promises)).sort(
+            (a, b) =>
+              Number((a as project).priority) - Number((b as project).priority)
+          )
+        )}`;
+      }
+    },
+  };
+};
+
+type project = {
+  priority: string;
 };

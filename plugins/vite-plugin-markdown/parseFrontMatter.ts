@@ -1,6 +1,6 @@
 export const parseFrontMatter = (data: string) => {
   const metadata = data.match(/---(.*\n)*---/);
-  if (!metadata) return null;
+  if (!metadata) return {};
   const details = (metadata[0].match(/(.*):(.*)/g) || []).reduce<
     Record<string, string | string[]>
   >((obj, detail) => {
