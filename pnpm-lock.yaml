@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@solidjs/router': ^0.5.0
   '@tailwindcss/aspect-ratio': ^0.4.2
   '@tailwindcss/forms': ^0.5.3
   '@tailwindcss/line-clamp': ^0.4.2
@@ -19,6 +20,7 @@ specifiers:
   postcss: ^8.4.18
   prettier: ^2.7.1
   prettier-plugin-tailwindcss: ^0.1.13
+  solid-heroicons: ^3.1.0
   solid-js: ^1.6.0
   tailwindcss: ^3.2.1
   typescript: ^4.8.4
@@ -27,6 +29,8 @@ specifiers:
   vitest: ^0.24.3
 
 dependencies:
+  '@solidjs/router': 0.5.0_solid-js@1.6.0
+  solid-heroicons: 3.1.0_solid-js@1.6.0
   solid-js: 1.6.0
 
 devDependencies:
@@ -713,6 +717,17 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
     dev: true
+
+  /@solidjs/router/0.5.0_solid-js@1.6.0:
+    resolution:
+      {
+        integrity: sha512-rNR07l21tWWDVmCbaapggB89rEX7jlM2XChpTLqEGEnj46LzVZ8zgvjcF6NNKScByAlLpoQUkVIjB2KHpcMi+w==,
+      }
+    peerDependencies:
+      solid-js: ^1.5.3
+    dependencies:
+      solid-js: 1.6.0
+    dev: false
 
   /@tailwindcss/aspect-ratio/0.4.2_tailwindcss@3.2.1:
     resolution:
@@ -3992,6 +4007,17 @@ packages:
       ansi-styles: 6.2.1
       is-fullwidth-code-point: 4.0.0
     dev: true
+
+  /solid-heroicons/3.1.0_solid-js@1.6.0:
+    resolution:
+      {
+        integrity: sha512-cOw5cxS3zgcoOChyvobvHZmHSCinnkkpsiyEiMW+irltb/6iwKq123CUD/W70astfwBvVopnixCQIF19JUzzMA==,
+      }
+    peerDependencies:
+      solid-js: '>= ^1.2.5'
+    dependencies:
+      solid-js: 1.6.0
+    dev: false
 
   /solid-js/1.6.0:
     resolution:

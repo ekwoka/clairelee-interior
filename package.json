@@ -39,6 +39,8 @@
     "vitest": "^0.24.3"
   },
   "dependencies": {
+    "@solidjs/router": "^0.5.0",
+    "solid-heroicons": "^3.1.0",
     "solid-js": "^1.6.0"
   },
   "lint-staged": {
@@ -62,11 +64,13 @@
       "@trivago/prettier-plugin-sort-imports"
     ],
     "importOrder": [
-      "^@components/(.*)$",
-      "^@client(.*)$",
-      "^@server(.*)$",
-      "^@utils(.*)$",
-      "^@assets(.*)$",
+      "solid-?js",
+      "routes(.*)$",
+      "organisms(.*)$",
+      "molecules(.*)$",
+      "atoms(.*)$",
+      "utils(.*)$",
+      "assets(.*)$",
       "^[./]"
     ],
     "importOrderSeparation": true,
