@@ -1,8 +1,11 @@
 import { defineConfig } from 'vite';
 import solidPlugin from 'vite-plugin-solid';
+import tsconfigPaths from 'vite-tsconfig-paths';
+
+import { MDX } from './plugins/vite-plugin-markdown';
 
 export default defineConfig({
-  plugins: [solidPlugin()],
+  plugins: [solidPlugin(), MDX(), tsconfigPaths()],
   server: {
     port: 3000,
   },

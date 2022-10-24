@@ -1,5 +1,12 @@
 {
   "compilerOptions": {
+    "paths": {
+      "@atoms": ["./src/components/atoms/index.ts"],
+      "@molecules": ["./src/components/molecules/index.ts"],
+      "@organisms": ["./src/components/organisms/index.ts"],
+      "@routes": ["./src/components/routes/index.ts"],
+      "@utils": ["./src/utils/index.ts"]
+    },
     "strict": true,
     "target": "ESNext",
     "module": "ESNext",
