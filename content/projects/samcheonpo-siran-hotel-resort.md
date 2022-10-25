@@ -3,8 +3,8 @@ layout: project
 title: Samcheonpo Siran Hotel & Resort
 priority: 8
 location: South Korea
-thumbnail: /images/uploads/enscape_2021-10-14-09-59-38.jpg
-hero: /images/uploads/entry.jpg
+thumbnail: /images/enscape_2021-10-14-09-59-38.jpg
+hero: /images/entry.jpg
 ---
 
 Strolling on the sandy beachfront of Sacheon, feeling the wind in her hair and the powdery fine sand on the feet, she enjoys a moment like this. appreciating the beautiful scenic view and clear waters of the southern ocean in front of her eyes.
@@ -19,7 +19,7 @@ She gently lifts the latch off and opens the lid, revealing a beam of lights, re
 
 “Revealing a beam of lights, resembling the sparkles of a rainbow and sees a blurry image of a mystical castle from afar...A dreamscape castle."
 
-![](/images/uploads/enscape_2021-10-14-09-59-38.jpg)
+![](/images/enscape_2021-10-14-09-59-38.jpg)
 
 T H E L O B B Y
 
@@ -27,13 +27,13 @@ T H E L O B B Y
 
 “Surrounding by dazzling lights, she finds the luring sight of the great hall beckoning to welcome her.”
 
-![](/images/uploads/add.jpg)
+![](/images/add.jpg)
 
 A L L D A Y D I N I N G
 
 “She picks up a delicate seashell and is drawn into its dreamy aesthetics leading to the dining hall.”
 
-![](/images/uploads/rooftop.jpg)
+![](/images/rooftop.jpg)
 
 R O O F T O P B A R
 
@@ -41,7 +41,7 @@ R O O F T O P B A R
 
 “She finds herself at the horizon, where the sky and sea meets, dreaming of the possibilities.”
 
-![](/images/uploads/2021.10.20_king-guestroom.jpg)
+![](/images/2021.10.20_king-guestroom.jpg)
 
 G U E S T R O O M
 

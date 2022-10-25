@@ -2,7 +2,12 @@
 [build]
   command = "pnpm run build"
   functions = "netlify/functions"
+  edge_functions = "functions"
   publish = "dist"
+
+  [[edge_functions]]
+  path = "/image/*"
+  function = "image"
 
 [context.production.environment]
   NODE_VERSION = '18.11.0'

@@ -1,5 +1,8 @@
 node_modules
 dist
+src/static/images/original
 
 # Local Netlify folder
 .netlify
+.env
+.DS_Store
