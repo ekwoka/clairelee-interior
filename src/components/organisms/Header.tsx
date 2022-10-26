@@ -2,16 +2,17 @@ import { Icon } from 'solid-heroicons';
 import { bars_3 } from 'solid-heroicons/solid';
 
 import { A } from '@solidjs/router';
-import { Component, createSignal } from 'solid-js';
+import { Component } from 'solid-js';
 
+import { createBeacon } from '../../hooks';
 import { classNames } from '../../utils/classNames';
 
 export const Header: Component = () => {
-  const [atTop, setAtTop] = createSignal(true);
-  const [menuIsOpen, setMenuIsOpen] = createSignal(false);
+  const atTop = createBeacon(true);
+  const menuIsOpen = createBeacon(false);
   const headerOnMount = (el: HTMLElement) => {
     let raf: number | null;
-    window.addEventListener('scroll', () => {
+    const onScroll = () => {
       if (raf) return;
       raf = requestAnimationFrame(() => {
         el.style.setProperty(
@@ -22,19 +23,22 @@ export const Header: Component = () => {
           '--tw-backdrop-blur',
           `blur(${Math.min(4, window.scrollY / 20).toFixed(1)}px)`
         );
-        setAtTop(window.scrollY < 100);
+        atTop(window.scrollY < 100);
         raf = null;
       });
-    });
+    };
+    window.addEventListener('scroll', onScroll);
+    onScroll();
+    return () => window.removeEventListener('scroll', onScroll);
   };
   return (
     <>
       <div
         class={classNames(
-          'fixed inset-0 bg-black transition-colors duration-1000 md:hidden',
+          'fixed inset-0 bg-black transition-colors duration-1000 md:hidden z-10',
           menuIsOpen() ? 'bg-opacity-50' : 'bg-opacity-0 pointer-events-none'
         )}
-        onClick={() => setMenuIsOpen(false)}
+        onClick={() => menuIsOpen(false)}
       />
       <header
         ref={headerOnMount}
@@ -47,14 +51,16 @@ export const Header: Component = () => {
         <div class="max-w-screen-md mx-auto flex justify-between relative items-center gap-16 px-4">
           <nav class="flex-1 hidden md:flex flex-row gap-8 justify-end">
             <A href="/projects">Projects</A>
-            <span>About</span>
+            <A href="/#">About</A>
           </nav>
-          <h1 class="flex-none flex flex-col items-center uppercase font-serif">
-            <span class="text-xl md:text-3xl border-b border-black px-2 md:px-4">
-              Claire Lee
-            </span>
-            <span class="text-md md:text-lg tracking-widest">Interior</span>
-          </h1>
+          <A href="/" class="flex-none">
+            <h1 class="flex-none flex flex-col items-center uppercase font-serif">
+              <span class="text-xl md:text-3xl border-b border-black px-2 md:px-4">
+                Claire Lee
+              </span>
+              <span class="text-md md:text-lg tracking-widest">Interior</span>
+            </h1>
+          </A>
           <nav class="flex-1 hidden md:flex flex-row gap-8 justify-st art">
             <span>Contact</span>
             <span>LinkedIn</span>
@@ -62,7 +68,7 @@ export const Header: Component = () => {
 
           <button
             type="button"
-            onClick={() => setMenuIsOpen(!menuIsOpen())}
+            onClick={() => menuIsOpen(!menuIsOpen())}
             class="p-2 md:hidden">
             <Icon path={bars_3} class="w-6 h-6" />
             <span class="sr-only">{menuIsOpen() ? 'Close' : 'Open'} menu</span>
@@ -73,9 +79,9 @@ export const Header: Component = () => {
             'md:hidden absolute bg-neutral-50 top-full inset-x-0 flex flex-col gap-2 p-4 items-center transition-all duration-700 shadow-md',
             menuIsOpen() ? 'opacity-100' : 'opacity-0 pointer-events-none'
           )}>
-          <button type="button">Projects</button>
-          <button type="button">About Me</button>
-          <button type="button">CV</button>
+          <A href="/projects">Projects</A>
+          <A href="/#">About Me</A>
+          <A href="/#">CV</A>
         </nav>
       </header>
     </>
