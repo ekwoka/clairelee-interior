@@ -11,6 +11,8 @@
     "lint": "run-s lint:*",
     "lint:eslint": "eslint --fix src",
     "lint:prettier": "prettier --write . --loglevel warn",
+    "optimize": "run-p optimize:*",
+    "optimize:images": "node scripts/optimizeImages.js",
     "prepare": "husky install"
   },
   "license": "MIT",

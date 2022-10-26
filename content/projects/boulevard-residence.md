@@ -3,15 +3,15 @@ layout: project
 title: BOULEVARD RESIDENCE
 priority: 3
 location: Orchard, Singapore
-thumbnail: /images/living-room.jpg
-hero: /images/living-room.jpg
+thumbnail: /image/living-room.jpg
+hero: /image/living-room.jpg
 ---
 
 "All the world’s a stage and all the men and women merely players."
 
 William Shakespeare
 
-![](/images/foyer.jpg)
+![](/image/foyer.jpg)
 
 Located on the top floor of the condominium in Orchard, Boulevard residence is a high-end residential project, inspired by a theatrical stage where a diva stands on.
 
@@ -19,14 +19,14 @@ Arriving from a private elevator, client will first enter a foyer greeting her w
 
 Following through a foyer, soft muted color and materials with beautiful scenery of Orchard welcome you home from the hustling day and directs your senses inwards to the personal tranquil sanctuary.
 
-![](/images/living-room.jpg)
+![](/image/living-room.jpg)
 
-![](/images/dining.jpg)
+![](/image/dining.jpg)
 
-![](/images/master-bedroom-copy.jpg)
+![](/image/master-bedroom-copy.jpg)
 
-![](/images/bedroom-front-tv-wall.jpg)
+![](/image/bedroom-front-tv-wall.jpg)
 
-![](/images/bathroom.jpg)
+![](/image/bathroom.jpg)
 
-![](/images/study-room.jpg)
+![](/image/study-room.jpg)

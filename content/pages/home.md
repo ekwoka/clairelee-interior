@@ -1,4 +1,4 @@
 ---
 title: Home
-image: /images/lobby-area-effect-panel-update.jpg
+image: /image/lobby-area-effect-panel-update.jpg
 ---
