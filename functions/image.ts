@@ -12,7 +12,11 @@ export default async (req: Request, ctx: Context) => {
       headers: req.headers,
     }
   );
-  return new Response(response.body);
+  return new Response(response.body, {
+    headers: response.headers,
+    status: response.status,
+    statusText: response.statusText,
+  });
 };
 
 const makeCloudURL = (path: string, width: string) =>
