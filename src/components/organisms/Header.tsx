@@ -17,11 +17,11 @@ export const Header: Component = () => {
       raf = requestAnimationFrame(() => {
         el.style.setProperty(
           '--tw-bg-opacity',
-          Math.min(0.7, window.scrollY / 200).toFixed(2)
+          Math.max(0, Math.min(0.7, window.scrollY / 200)).toFixed(2)
         );
         el.style.setProperty(
           '--tw-backdrop-blur',
-          `blur(${Math.min(4, window.scrollY / 20).toFixed(1)}px)`
+          `blur(${Math.max(1, Math.min(4, window.scrollY / 20)).toFixed(1)}px)`
         );
         atTop(window.scrollY < 100);
         raf = null;
@@ -43,7 +43,7 @@ export const Header: Component = () => {
       <header
         ref={headerOnMount}
         class={classNames(
-          'w-full sticky top-0 transition-all bg-neutral-100 duration-700 p-4 backdrop-filter z-10',
+          'w-full sticky top-0 transition-all bg-neutral-100 duration-700 p-4 backdrop-filter z-10 hover:!bg-opacity-70 hover:!backdrop-blur-sm',
           atTop() ? 'shadow-none' : 'shadow-md',
           menuIsOpen() && '!bg-opacity-100 !bg-neutral-50'
         )}
@@ -51,7 +51,7 @@ export const Header: Component = () => {
         <div class="max-w-screen-md mx-auto flex justify-between relative items-center gap-16 px-4">
           <nav class="flex-1 hidden md:flex flex-row gap-8 justify-end">
             <A href="/projects">Projects</A>
-            <A href="/#">About</A>
+            <A href="/about">About</A>
           </nav>
           <A href="/" class="flex-none">
             <h1 class="flex-none flex flex-col items-center uppercase font-serif">

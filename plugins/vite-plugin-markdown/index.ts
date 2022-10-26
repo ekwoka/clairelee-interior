@@ -38,10 +38,11 @@ export const MDX = (): vite.Plugin => {
         const content = await readFile(target, 'utf-8');
         const details = parseFrontMatter(content);
         return `import SolidMarkdown from 'solid-markdown';
+        import { components } from '../../src/components/atoms';
         export const content = \`${content.replace(/---(.*\n)*---/, '')}\`;
         export const details = ${JSON.stringify(details)};
         export const Component = () => (
-          <SolidMarkdown class="prose mx-auto">{content}</SolidMarkdown>
+          <SolidMarkdown class="prose mx-auto" components={components}>{content}</SolidMarkdown>
         )`;
       }
       return null;
@@ -77,7 +78,7 @@ export const virtualProjectsIndex = (): vite.Plugin => {
         const files = await readdir(
           path.join(process.cwd(), 'content', 'projects')
         );
-        const promises = files.map(async (file) => {
+        const promises = files.map<Promise<project>>(async (file) => {
           const { name, ext } = path.parse(file);
           const target = path.join(
             process.cwd(),
@@ -87,13 +88,12 @@ export const virtualProjectsIndex = (): vite.Plugin => {
           );
           const content = await readFile(target, 'utf-8');
           const details = parseFrontMatter(content);
-          return { ...details, id: name };
+          return { ...details, id: name } as project;
         });
 
         return `export const projects = ${JSON.stringify(
           (await Promise.all(promises)).sort(
-            (a, b) =>
-              Number((a as project).priority) - Number((b as project).priority)
+            (a, b) => Number(a.priority) - Number(b.priority)
           )
         )}`;
       }
@@ -103,4 +103,5 @@ export const virtualProjectsIndex = (): vite.Plugin => {
 
 type project = {
   priority: string;
+  id: string;
 };
