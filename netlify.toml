@@ -23,5 +23,10 @@
     to = "/index.html"
     status = 200
 
+  [[headers]]
+    for = "/*"
+    [headers.values]
+      Link = "<https://res.cloudinary.com/>; rel=preconnect"
+
 [functions]
   node_bundler = "esbuild"
