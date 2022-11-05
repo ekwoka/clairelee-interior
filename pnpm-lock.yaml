@@ -14,21 +14,21 @@ specifiers:
   autoprefixer: ^10.4.13
   eslint: ^8.26.0
   eslint-config-prettier: ^8.5.0
-  eslint-plugin-filename-export: ^0.4.0
+  eslint-plugin-filename-export: ^0.5.0
   husky: ^8.0.1
   lint-staged: ^13.0.3
   npm-run-all: ^4.1.5
   postcss: ^8.4.18
   prettier: ^2.7.1
   prettier-plugin-tailwindcss: ^0.1.13
-  sharp: ^0.31.1
+  sharp: ^0.31.2
   solid-heroicons: ^3.1.0
   solid-js: ^1.6.1
   solid-markdown: ^1.2.0
-  tailwindcss: ^3.2.1
+  tailwindcss: ^3.2.2
   typescript: ^4.8.4
   vite: ^3.2.2
-  vite-plugin-solid: ^2.3.10
+  vite-plugin-solid: ^2.4.0
   vite-plugin-static-copy: ^0.11.1
   vite-tsconfig-paths: ^3.5.2
   vitest: ^0.24.5
@@ -40,10 +40,10 @@ dependencies:
   solid-markdown: 1.2.0_solid-js@1.6.1
 
 devDependencies:
-  '@tailwindcss/aspect-ratio': 0.4.2_tailwindcss@3.2.1
-  '@tailwindcss/forms': 0.5.3_tailwindcss@3.2.1
-  '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.2.1
-  '@tailwindcss/typography': 0.5.7_tailwindcss@3.2.1
+  '@tailwindcss/aspect-ratio': 0.4.2_tailwindcss@3.2.2
+  '@tailwindcss/forms': 0.5.3_tailwindcss@3.2.2
+  '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.2.2
+  '@tailwindcss/typography': 0.5.7_tailwindcss@3.2.2
   '@trivago/prettier-plugin-sort-imports': 3.4.0_prettier@2.7.1
   '@types/node': 18.11.9
   '@types/sharp': 0.31.0
@@ -52,18 +52,18 @@ devDependencies:
   autoprefixer: 10.4.13_postcss@8.4.18
   eslint: 8.26.0
   eslint-config-prettier: 8.5.0_eslint@8.26.0
-  eslint-plugin-filename-export: 0.4.0
+  eslint-plugin-filename-export: 0.5.0
   husky: 8.0.1
   lint-staged: 13.0.3
   npm-run-all: 4.1.5
   postcss: 8.4.18
   prettier: 2.7.1
   prettier-plugin-tailwindcss: 0.1.13_prettier@2.7.1
-  sharp: 0.31.1
-  tailwindcss: 3.2.1_postcss@8.4.18
+  sharp: 0.31.2
+  tailwindcss: 3.2.2_postcss@8.4.18
   typescript: 4.8.4
   vite: 3.2.2
-  vite-plugin-solid: 2.3.10_solid-js@1.6.1+vite@3.2.2
+  vite-plugin-solid: 2.4.0_solid-js@1.6.1+vite@3.2.2
   vite-plugin-static-copy: 0.11.1_vite@3.2.2
   vite-tsconfig-paths: 3.5.2_vite@3.2.2
   vitest: 0.24.5
@@ -746,7 +746,7 @@ packages:
       solid-js: 1.6.1
     dev: false
 
-  /@tailwindcss/aspect-ratio/0.4.2_tailwindcss@3.2.1:
+  /@tailwindcss/aspect-ratio/0.4.2_tailwindcss@3.2.2:
     resolution:
       {
         integrity: sha512-8QPrypskfBa7QIMuKHg2TA7BqES6vhBrDLOv8Unb6FcFyd3TjKbc6lcmb9UPQHxfl24sXoJ41ux/H7qQQvfaSQ==,
@@ -754,10 +754,10 @@ packages:
     peerDependencies:
       tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
     dependencies:
-      tailwindcss: 3.2.1_postcss@8.4.18
+      tailwindcss: 3.2.2_postcss@8.4.18
     dev: true
 
-  /@tailwindcss/forms/0.5.3_tailwindcss@3.2.1:
+  /@tailwindcss/forms/0.5.3_tailwindcss@3.2.2:
     resolution:
       {
         integrity: sha512-y5mb86JUoiUgBjY/o6FJSFZSEttfb3Q5gllE4xoKjAAD+vBrnIhE4dViwUuow3va8mpH4s9jyUbUbrRGoRdc2Q==,
@@ -766,10 +766,10 @@ packages:
       tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
     dependencies:
       mini-svg-data-uri: 1.4.4
-      tailwindcss: 3.2.1_postcss@8.4.18
+      tailwindcss: 3.2.2_postcss@8.4.18
     dev: true
 
-  /@tailwindcss/line-clamp/0.4.2_tailwindcss@3.2.1:
+  /@tailwindcss/line-clamp/0.4.2_tailwindcss@3.2.2:
     resolution:
       {
         integrity: sha512-HFzAQuqYCjyy/SX9sLGB1lroPzmcnWv1FHkIpmypte10hptf4oPUfucryMKovZh2u0uiS9U5Ty3GghWfEJGwVw==,
@@ -777,10 +777,10 @@ packages:
     peerDependencies:
       tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
     dependencies:
-      tailwindcss: 3.2.1_postcss@8.4.18
+      tailwindcss: 3.2.2_postcss@8.4.18
     dev: true
 
-  /@tailwindcss/typography/0.5.7_tailwindcss@3.2.1:
+  /@tailwindcss/typography/0.5.7_tailwindcss@3.2.2:
     resolution:
       {
         integrity: sha512-JTTSTrgZfp6Ki4svhPA4mkd9nmQ/j9EfE7SbHJ1cLtthKkpW2OxsFXzSmxbhYbEkfNIyAyhle5p4SYyKRbz/jg==,
@@ -792,7 +792,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
-      tailwindcss: 3.2.1_postcss@8.4.18
+      tailwindcss: 3.2.2_postcss@8.4.18
     dev: true
 
   /@trivago/prettier-plugin-sort-imports/3.4.0_prettier@2.7.1:
@@ -2290,10 +2290,10 @@ packages:
       eslint: 8.26.0
     dev: true
 
-  /eslint-plugin-filename-export/0.4.0:
+  /eslint-plugin-filename-export/0.5.0:
     resolution:
       {
-        integrity: sha512-qRH1ec+EB/o28+dWwz56xOy9EvfbI6viqV7+qHBqFidediZ23MA4leX+fL/6DEjPRVSpNNa+RivJquA/DpcvbQ==,
+        integrity: sha512-Knyu2XY+UPQDSmasRdrhlhWX7acJl7Vum2kgh4O7cgF9a0yg9Yts7AgpdNqfh2T67K7c75/R65JsqzDgSsgnXA==,
       }
     dev: true
 
@@ -4966,10 +4966,10 @@ packages:
       lru-cache: 6.0.0
     dev: true
 
-  /sharp/0.31.1:
+  /sharp/0.31.2:
     resolution:
       {
-        integrity: sha512-GR8M1wBwOiFKLkm9JPun27OQnNRZdHfSf9VwcdZX6UrRmM1/XnOrLFTF0GAil+y/YK4E6qcM/ugxs80QirsHxg==,
+        integrity: sha512-DUdNVEXgS5A97cTagSLIIp8dUZ/lZtk78iNVZgHdHbx1qnQR7JAHY0BnXnwwH39Iw+VKhO08CTYhIg0p98vQ5Q==,
       }
     engines: { node: '>=14.15.0' }
     requiresBuild: true
@@ -5432,10 +5432,10 @@ packages:
     engines: { node: '>= 0.4' }
     dev: true
 
-  /tailwindcss/3.2.1_postcss@8.4.18:
+  /tailwindcss/3.2.2_postcss@8.4.18:
     resolution:
       {
-        integrity: sha512-Uw+GVSxp5CM48krnjHObqoOwlCt5Qo6nw1jlCRwfGy68dSYb/LwS9ZFidYGRiM+w6rMawkZiu1mEMAsHYAfoLg==,
+        integrity: sha512-c2GtSdqg+harR4QeoTmex0Ngfg8IIHNeLQH5yr2B9uZbZR1Xt1rYbjWOWTcj3YLTZhrmZnPowoQDbSRFyZHQ5Q==,
       }
     engines: { node: '>=12.13.0' }
     hasBin: true
@@ -5642,7 +5642,7 @@ packages:
         integrity: sha512-McnNiV1l8RYeY8tBgEpuodCC1mLUdbSN+CYBL7kJsJNInOP8UjDDEwdk6Mw60vdLLrr5NHKZhMAOSrR2NZuQ+w==,
       }
     dependencies:
-      safe-buffer: 5.1.2
+      safe-buffer: 5.2.1
     dev: true
 
   /type-check/0.4.0:
@@ -5861,10 +5861,10 @@ packages:
       vfile-message: 3.1.2
     dev: false
 
-  /vite-plugin-solid/2.3.10_solid-js@1.6.1+vite@3.2.2:
+  /vite-plugin-solid/2.4.0_solid-js@1.6.1+vite@3.2.2:
     resolution:
       {
-        integrity: sha512-5jMF+QFk2TQaPLlDl7LvZZ99D4kO1X+rD9LR78p9sx9O+XisVSQaHFPLrCsyW/lXuBwub+ox/pNaZdCUZJwd3Q==,
+        integrity: sha512-Rr+t2sr9TWIvH16yzBZzx6O9YSpYAvcwKUMPqbi/4iU3mRumXQ4O10i1XGtQIynC7U3XwJsMzAJigDFGbiJBiw==,
       }
     peerDependencies:
       solid-js: ^1.3.17
@@ -5877,6 +5877,7 @@ packages:
       solid-js: 1.6.1
       solid-refresh: 0.4.1_solid-js@1.6.1
       vite: 3.2.2
+      vitefu: 0.1.1_vite@3.2.2
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -5945,6 +5946,20 @@ packages:
       rollup: 2.79.1
     optionalDependencies:
       fsevents: 2.3.2
+    dev: true
+
+  /vitefu/0.1.1_vite@3.2.2:
+    resolution:
+      {
+        integrity: sha512-HClD14fjMJ+NQgXBqT3dC3RdO/+Chayil+cCPYZKY3kT+KcJomKzrdgzfCHJkIL2L0OAY+VPvrSW615iPtc7ag==,
+      }
+    peerDependencies:
+      vite: ^3.0.0
+    peerDependenciesMeta:
+      vite:
+        optional: true
+    dependencies:
+      vite: 3.2.2
     dev: true
 
   /vitest/0.24.5:
