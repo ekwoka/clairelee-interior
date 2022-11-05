@@ -3,14 +3,14 @@ layout: project
 title: 2 CAVAN ROAD
 priority: 9
 location: Singapore
-thumbnail: /image/lobby-area-effect-panel-update.jpg
-hero: /image/lobby-area-effect-panel-update.jpg
+thumbnail: /images/lobby-area-effect-panel-update.jpg
+hero: /images/lobby-area-effect-panel-update.jpg
 ---
 
-![](/image/entry-sketch.jpg)
+![](/images/entry-sketch.jpg)
 
-![](/image/entry_rendering.jpg)
+![](/images/entry_rendering.jpg)
 
-![](/image/lobby-sketch.jpg)
+![](/images/lobby-sketch.jpg)
 
-![](/image/lobby-rendering.jpg)
+![](/images/lobby-rendering.jpg)

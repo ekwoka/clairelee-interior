@@ -1,3 +1,3 @@
 ---
-image: /image/lobby-area-effect-panel-update.jpg
+image: /images/lobby-area-effect-panel-update.jpg
 ---
