@@ -1,8 +1,9 @@
 import { Buffer } from 'node:buffer';
-import { readFile, readdir, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { cwd } from 'process';
 import sharp from 'sharp';
+
+import { readFile, readdir, writeFile } from 'node:fs/promises';
 
 const root = join(cwd(), 'src', 'static', 'images');
 let totalSavings = 0;

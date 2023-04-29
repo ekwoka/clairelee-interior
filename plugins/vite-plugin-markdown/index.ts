@@ -1,9 +1,9 @@
 /* eslint-disable no-restricted-syntax */
-import { readFile, readdir } from 'fs/promises';
 import path from 'path';
 import * as vite from 'vite';
 
 import { parseFrontMatter } from './parseFrontMatter';
+import { readFile, readdir } from 'fs/promises';
 
 export const MDX = (): vite.Plugin => {
   return {

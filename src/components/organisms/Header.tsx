@@ -1,11 +1,11 @@
 import { Icon } from 'solid-heroicons';
-import { bars_3 } from 'solid-heroicons/solid';
 
 import { A } from '@solidjs/router';
 import { Component } from 'solid-js';
 
 import { createBeacon } from '../../hooks';
 import { classNames } from '../../utils/classNames';
+import { bars_3 } from 'solid-heroicons/solid';
 
 export const Header: Component = () => {
   const atTop = createBeacon(true);
